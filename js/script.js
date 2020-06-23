@@ -1,12 +1,8 @@
-//Choose a random color
-const button = document.querySelector('button')
-const body = document.querySelector('body')
-const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple']
+let button = document.querySelector('button');
 
-body.style.backgroundColor = 'violet'
-button.addEventListener('click', changeBackground)
-
-function changeBackground(){
-const colorIndex= parseInt(Math.random()*colors.length)
-body.style.backgroundColor = colors[colorIndex]
-}
+button.addEventListener('click', /*event*/() => {
+    /*button.innerHTML = `Click count: ${event.detail}`;*/
+    //document.getElementsByClassName('container').style.backgroundColor = "green";
+    document.body.style.backgroundColor = "green";
+    button.style.backgroundColor = "blue";
+});
