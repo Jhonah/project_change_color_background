@@ -1,12 +1,20 @@
 //Choose a random color
-const button = document.querySelector('button');
+//const button = document.querySelector('button');
 const body = document.querySelector('body');
+const button = document.querySelector('a');
+const span = document.querySelector('span');
 
 button.addEventListener('click', /*event*/() => {
   /*button.innerHTML = `Click count: ${event.detail}`;*/
   //document.getElementsByClassName('container').style.backgroundColor = "green";
   //button.style.backgroundColor = "blue";
-  setRandomColor();
+  const color = getRandomColor();
+  setRandomColor(color);
+  /*
+    https://stackoverflow.com/questions/1533568/what-is-the-correct-way-to-write-html-using-javascript
+  */
+  span.innerHTML = color;
+  //console.log(color);
 });
 
 /* 
@@ -21,8 +29,8 @@ function getRandomColor() {
   return color;
 }
 
-function setRandomColor() {
-  body.style.backgroundColor = getRandomColor();
+function setRandomColor(color) {
+  body.style.backgroundColor = color;
 }
 
 /* 
